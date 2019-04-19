@@ -63,15 +63,15 @@
 					<h2>Custom Element Example</h2>
 					<pre><code data-trim data-noescape class="typescript">
 class MyComponent extends HTMLElement {
-	createdCallback() {
+	constructor() {
 		// Standard DOM/fetch/etc. code...
 	}
-	attachedCallback() {}
-	detachedCallback() {}
+	connectedCallback() {}
+	disconnectedCallback() {}
 	attributeChangedCallback() {}
 }
 
-document.registerElement('my-component', MyComponent);
+window.customElements.define('my-component', MyComponent);
 					</code></pre>
 				</section>
 				<section>
